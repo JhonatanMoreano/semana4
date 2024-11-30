@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Formulario</title>
+    </head>
+    <body class="d-flex justify-content-center aling-items-center" style="height: 100vh;">
+
+        <div class="border p-4 rounded">
+
+            <form action="/guardar" method="post" th:object="${usuario}" class="w=100" style="max-width: 400px;">
+                <h1 class="text-center mb-4">Formulario Registro de Productos</h1> 
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" th:field="*{nombre}" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="fechaCaducidad" class="form-label">Fecha Caducidad:</label>
+                    <input type="text" class="form-control" id="fechaCaducidad" name="fechaCaducidad" th:field="*{fechaCaducidad}" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="stockMinimo" class="form-label">Stock Minimo:</label>
+                    <input type="text" class="form-control" id="stockMinimo" name="stockMinimo" th:field="*{stockMinimo}" required/>
+                </div>
+
+                <div class="mb-3">
+                    <label for="stockMaximo" class="form-label">Stock Maximo:</label>
+                    <input type="text" class="form-control" id="stockMaximo" name="stockMaximo" th:field="*{stockMaximo}" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="precioUnitario" class="form-label">Precio Unitario:</label>
+                    <input type="text" class="form-control" id="precioUnitario" name="precioUnitario" th:field="*{precioUnitario}" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoria:</label>
+                    <input type="text" class="form-control" id="categoria" name="categoria" th:field="*{categoria}" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="marca" class="form-label">Marca:</label>
+                    <input type="text" class="form-control" id="marca" name="marca" th:field="*{marca}" required />
+                </div>
+
+                <div class="tex-center">
+                    <button class="btn btn-primary" type="submit" class="btn btn-primary mb-3" >Enviar</button>
+                </div>
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
+
